@@ -15,6 +15,13 @@
 	</properties>
 
 	<dependencies>
+		<!--Linking backend project -->
+		<dependency>
+			<groupId>org.pradeep</groupId>
+			<artifactId>backend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 		<!-- Javaee-api -->
 		<dependency>
 			<groupId>javax</groupId>
