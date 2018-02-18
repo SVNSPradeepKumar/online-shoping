@@ -11,31 +11,26 @@ public class PageController {
 	public ModelAndView index()
 	{
 		ModelAndView mv=new ModelAndView("page");
-		mv.addObject("greeiting","welcome to springmvc");
+		mv.addObject("title","Home");
+		mv.addObject("userClickHome",true);
 		return mv;
 	}
 	
-	/*@RequestMapping(value="test")
-	public ModelAndView test(@RequestParam(value="greeting",required=false)String greeting)
+	@RequestMapping(value= "/about")
+	public ModelAndView about()
 	{
-		if(greeting==null)
-		{
-			greeting="Hello Spring-MVC";
-		}
 		ModelAndView mv=new ModelAndView("page");
-		mv.addObject("greeiting",greeting);
+		mv.addObject("title","About Us");
+		mv.addObject("userClickAbout",true);
 		return mv;
-	}*/
+	}
 	
-	/*@RequestMapping(value="test/{greeting}")
-	public ModelAndView test(@PathVariable(value="greeting")String greeting)
+	@RequestMapping(value= "/contact")
+	public ModelAndView contact()
 	{
-		if(greeting==null)
-		{
-			greeting="Hello Spring-MVC";
-		}
 		ModelAndView mv=new ModelAndView("page");
-		mv.addObject("greeiting",greeting);
+		mv.addObject("contact","Contact Us");
+		mv.addObject("userClickContact",true);
 		return mv;
-	}*/
+	}
 }
